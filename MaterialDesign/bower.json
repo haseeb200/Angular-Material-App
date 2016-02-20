@@ -1,0 +1,7 @@
+{
+  "name": "Bonobo Git Server",
+  "dependencies": {
+    "angular-material": "^1.0.5",
+    "angular-material-icons": "^0.6.0"
+  }
+}

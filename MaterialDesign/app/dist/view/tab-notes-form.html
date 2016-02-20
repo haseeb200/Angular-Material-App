@@ -1,0 +1,24 @@
+﻿<md-content layout-padding>
+    <form name="noteForm" data-ng-submit="vm.addNote()" data-ng-init="vm.setFormScope(this)">
+        <div layout-gt-xs="row">
+            <md-input-container class="md-block" flext-gt-xs>
+                <label>Title</label>
+                <input data-ng-model="vm.newNote.title" name="title" required/>
+                <div data-ng-messages="noteForm.title.$error">
+                    <div data-ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
+            <md-datepicker data-ng-model="vm.newNote.date"
+                           md-placeholder="Enter Date"
+                           class="date-row">
+            </md-datepicker>
+
+            <div class="md-actions">
+                <md-button class="md-primary md-raised date-row" type="submit"
+                           data-ng-disabled="noteForm.$invalid">
+                    Add
+                </md-button>
+            </div>
+        </div>
+    </form>
+</md-content>
